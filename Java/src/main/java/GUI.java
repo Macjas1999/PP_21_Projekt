@@ -1,3 +1,5 @@
+import javafx.application.Application;
+
 public class GUI extends Application{
 
     @Override
@@ -6,5 +8,5 @@ public class GUI extends Application{
 
         primaryStage.show();
     }
-
 }
+

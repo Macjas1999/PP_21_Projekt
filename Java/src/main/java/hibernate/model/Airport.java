@@ -1,21 +1,20 @@
 package hibernate.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 
 public class Airport {
 
     @Id @GeneratedValue
-//    @Column(name = "id")
+    @CollectionTable
+    @Column
     private  int id;
 
-//    @Column(name = "IATA")
+    @Column
     private String IATA;
 
-//    @Column(name = "f_elevation")
+    @Column
     private  int f_elevation;
 
 

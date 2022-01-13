@@ -1,32 +1,37 @@
 package hibernate.model;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import javax.persistence.*;
 
 @Entity
+@JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
+        property="", scope=Aircraft.class)
 
-public class Airplane {
+
+public class Aircraft {
 
     @Id @GeneratedValue
-//    @Column(name = "id")
+    @CollectionTable
+    @Column
     private  int id;
 
-//    @Column(name = "type")
+    @Column
     private String type;
 
-//    @Column(name = "manufacturer")
+    @Column
     private  String manufacturer;
 
-//    @Column(name = "registration_number", unique = true)
+    @Column
     private String registration_number;
 
-//    @Column(name = "model")
+    @Column
     private  String model;
 
-    public Airplane(){}
-    public Airplane(String type, String manufacturer, String registration_number, String model) {
+    public Aircraft(){}
+    public Aircraft(String type, String manufacturer, String registration_number, String model) {
         this.type = type;
         this.manufacturer = manufacturer;
         this.registration_number = registration_number;

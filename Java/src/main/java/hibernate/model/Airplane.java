@@ -1,7 +1,6 @@
 package hibernate.model;
 
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,19 +10,19 @@ import javax.persistence.Id;
 public class Airplane {
 
     @Id @GeneratedValue
-    @Column(name = "id")
+//    @Column(name = "id")
     private  int id;
 
-    @Column(name = "type")
+//    @Column(name = "type")
     private String type;
 
-    @Column(name = "manufacturer")
+//    @Column(name = "manufacturer")
     private  String manufacturer;
 
-    @Column(name = "registration_number", unique = true)
+//    @Column(name = "registration_number", unique = true)
     private String registration_number;
 
-    @Column(name = "model")
+//    @Column(name = "model")
     private  String model;
 
 

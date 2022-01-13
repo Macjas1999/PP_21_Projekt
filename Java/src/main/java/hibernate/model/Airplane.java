@@ -25,6 +25,14 @@ public class Airplane {
 //    @Column(name = "model")
     private  String model;
 
+    public Airplane(){}
+    public Airplane(String type, String manufacturer, String registration_number, String model) {
+        this.type = type;
+        this.manufacturer = manufacturer;
+        this.registration_number = registration_number;
+        this.model = model;
+    }
+
 
     public int getId() {
         return id;

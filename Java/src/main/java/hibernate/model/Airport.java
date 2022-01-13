@@ -18,6 +18,15 @@ public class Airport {
 //    @Column(name = "f_elevation")
     private  int f_elevation;
 
+
+    public Airport(){}
+    public Airport(String IATA, int f_elevation) {
+        this.IATA = IATA;
+        this.f_elevation = f_elevation;
+    }
+
+
+
     public int getId() {
         return id;
     }

@@ -1,12 +1,18 @@
 package services;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import hibernate.model.Airport;
 import org.springframework.stereotype.Service;
-import repositories.AirportRepository;
+
+import java.util.Optional;
 
 @Service
 
 public interface AirportService {
-    @Autowired
-    AirportRepository airportRepository;
+    Airport saveAirport(Airport airport);
+
+    Optional<Airport> getAirportById(Integer id);
+
+    void deleteAirport(Integer id);
+
+    Iterable<Airport> listAllAirports();
 }

@@ -1,9 +1,9 @@
-package services;
+package com.services;
 
-import hibernate.model.Aircraft;
+import com.entities.Aircraft;
+import com.repositories.AircraftRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.AircraftRepository;
 
 import java.util.Optional;
 
@@ -14,17 +14,17 @@ public class AircraftServiceImpl implements AircraftService {
     private AircraftRepository aircraftRepository;
 
     @Override
-    public Iterable<Aircraft> listAllAircrafts() {
+    public Iterable<com.entities.Aircraft> listAllAircrafts() {
         return aircraftRepository.findAll();
     }
 
     @Override
-    public Optional<Aircraft> getAircraftById(Integer id) {
+    public Optional<com.entities.Aircraft> getAircraftById(Integer id) {
         return aircraftRepository.findById(id);
     }
 
     @Override
-    public Aircraft saveAircraft(Aircraft Aircraft) {
+    public com.entities.Aircraft saveAircraft(Aircraft Aircraft) {
         return aircraftRepository.save(Aircraft);
     }
 

@@ -1,7 +1,7 @@
-package controllers;
+package com.controllers;
 
-import hibernate.model.Aircraft;
-import hibernate.model.Airport;
+import entities.Aircraft;
+import entities.Airport;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

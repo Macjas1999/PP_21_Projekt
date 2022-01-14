@@ -1,4 +1,4 @@
-package hibernate.model;
+package com.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
@@ -8,7 +8,7 @@ import javax.persistence.*;
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
-        property="", scope=Aircraft.class)
+        property="", scope= entities.Aircraft.class)
 
 
 public class Aircraft {

@@ -1,6 +1,6 @@
-package services;
+package com.services;
 
-import hibernate.model.Aircraft;
+import entities.Aircraft;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

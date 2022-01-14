@@ -32,4 +32,12 @@ public class AirportServiceImpl implements AirportService {
     public void deleteAirport(Integer id) {
         airportRepository.deleteById(id);
     }
+
+    @Override
+    public Boolean checkExistance(Integer id) {
+        if (airportRepository.checkExistance(id) > 0)
+            return true;
+        else
+            return false;
+    }
 }

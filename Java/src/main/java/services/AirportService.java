@@ -15,4 +15,6 @@ public interface AirportService {
     void deleteAirport(Integer id);
 
     Iterable<Airport> listAllAirports();
+
+    Boolean checkExistance(Integer id);
 }

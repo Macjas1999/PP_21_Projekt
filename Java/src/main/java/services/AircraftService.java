@@ -15,4 +15,6 @@ public interface AircraftService {
     void deleteAircraft(Integer id);
 
     Iterable<Aircraft> listAllAircrafts();
+
+    Boolean checkExistance(Integer id);
 }

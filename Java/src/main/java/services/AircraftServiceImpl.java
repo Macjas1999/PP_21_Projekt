@@ -32,4 +32,12 @@ public class AircraftServiceImpl implements AircraftService {
     public void deleteAircraft(Integer id) {
         aircraftRepository.deleteById(id);
     }
+
+    @Override
+    public Boolean checkExistance(Integer id) {
+        if (aircraftRepository.checkExistance(id) > 0)
+            return true;
+        else
+            return false;
+    }
 }

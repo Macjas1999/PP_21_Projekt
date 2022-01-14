@@ -8,79 +8,59 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import services.AircraftService;
 import springfox.documentation.annotations.ApiIgnore;
-
-import javax.validation.Valid;
-import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api")
 public class AircraftController {
 
     @Autowired
+    private AircraftService aircraftService;
 
-    @GetMapping(value = "/aircrafts/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Aircraft list(Model model) {
-        return ;
+    //list
+    @GetMapping(value = "/aircrafts", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<Aircraft> list(Model model) {
+        return aircraftService.listAllAircrafts();
     }
 
+    ////for redirect
     @ApiIgnore
-
-    @RequestMapping(value = "/Aircrafts", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
-
+    @RequestMapping(value = "/aircrafts", method = RequestMethod.DELETE, produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Aircraft> redirect(Model model) {
-        return productService.listAllProducts();
+        return aircraftService.listAllAircrafts();
     }
 
-
-    @GetMapping(value = "/Aircrafts/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Aircraft> list(Aircrafts model) {
-        return ;
+    //List by id path
+    @GetMapping(value = "/aircraft/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Aircraft getByPublicId(@PathVariable("id")Integer publicId) {
+        return aircraftService.getAircraftById(publicId).orElseGet(null);
     }
-
-    @GetMapping(value = "/Aircrafts", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Aircraft getByParamPublicId(@RequestParam("id") Integer publicId) {
-        return productService.getProductById(publicId).orElseGet(null);
+    //List by id param
+    @GetMapping(value = "/aircraft", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Aircraft getByParamPublicId(@RequestParam("id")Integer publicId) {
+        return  aircraftService.getAircraftById(publicId).orElseGet(null);
     }
-
-
-    @PostMapping(value = "/product")
-    public ResponseEntity<Product> create(@RequestBody @NonNull @Valid
-                                                  Product product) {
-        product.setProductId(UUID.randomUUID().toString());
-        productService.saveProduct(product);
-        return ResponseEntity.ok().body(product);
+    //Save
+    @PostMapping("/aircraft")
+    public ResponseEntity<Aircraft> create(@RequestBody @NonNull Aircraft aircraft){
+        aircraftService.saveAircraft(aircraft);
+        return ResponseEntity.ok().body(aircraft);
     }
-
-    @PutMapping(value = "/Aircrafts")
-    public ResponseEntity<Void> edit(@RequestBody Aircrafts product) {
-        if(!productService.checkIfExist(product.getId()))
+    //Edit
+    @PutMapping(value = "/aircraft/{id}")
+    public  ResponseEntity<Void> edit(@RequestBody Aircraft aircraft) {
+        if (!aircraftService.checkExistance(aircraft.getId())) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        else {
-            productService.saveProduct(product);
+        } else {
             return new ResponseEntity<>(HttpStatus.CREATED);
+
         }
     }
-
-    /**
-     * Delete product by its id.
-     *
-     */
-    @DeleteMapping(value = "/Aircrafts/{id}")
-    public ResponseEntity delete(@PathVariable Integer id) {
-        productService.deleteProduct(id);
-        return new ResponseEntity<>(HttpStatus.OK);
+    //Delete
+    @DeleteMapping(value = "/product/{id}")
+    public  ResponseEntity delete(@PathVariable Integer id) {
+        aircraftService.deleteAircraft(id);
+        return new ResponseEntity(HttpStatus.OK);
     }
-
-    @DeleteMapping(value = "/Aircrafts/{id}")
-    public ResponseEntity deleteBadRequest(@PathVariable Integer id) {
-        return new ResponseEntity(HttpStatus.FORBIDDEN);
-    }
-
-
-    @GetMapping(value = "/Aircrafts/{page}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<Product> list(@PathVariable("page") Integer pageNr,@RequestParam("size") Optional<Integer> howManyOnPage) {
-        return productService.listAllProductsPaging(pageNr, howManyOnPage.orElse(2));
-    }
-
+}

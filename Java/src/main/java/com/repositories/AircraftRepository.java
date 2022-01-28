@@ -1,6 +1,5 @@
 package com.repositories;
 
-import entities.Aircraft;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

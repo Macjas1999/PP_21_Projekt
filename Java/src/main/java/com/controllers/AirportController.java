@@ -1,6 +1,6 @@
 package com.controllers;
 
-import entities.Airport;
+import com.entities.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import services.AirportService;
+import com.services.AirportService;
 import springfox.documentation.annotations.ApiIgnore;
 
 public class AirportController {

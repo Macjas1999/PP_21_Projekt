@@ -1,6 +1,6 @@
 package com.services;
 
-import entities.Airport;
+import com.entities.Airport;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

@@ -1,7 +1,7 @@
 package com.controllers;
 
-import entities.Aircraft;
-import entities.Airport;
+import com.entities.Aircraft;
+import com.entities.Airport;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

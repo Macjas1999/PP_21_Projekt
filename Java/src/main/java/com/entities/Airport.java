@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
-        property="", scope= entities.Airport.class)
+        property="", scope= com.entities.Airport.class)
 
 public class Airport {
 

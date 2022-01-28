@@ -1,6 +1,6 @@
 package com.repositories;
 
-import entities.Airport;
+import com.entities.Airport;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

@@ -17,9 +17,9 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@EnableJpaRepositories("repositories")
+@EnableJpaRepositories("com.repositories")
 @EnableSwagger2
-@EntityScan("entities")
+@EntityScan("com.entities")
 public class SpringApp extends SpringBootServletInitializer {
 
     public static void main(String[] args)

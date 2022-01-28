@@ -1,10 +1,10 @@
 package com.services;
 
-import entities.Airport;
+import com.entities.Airport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.AirportRepository;
-import services.AirportService;
+import com.repositories.AirportRepository;
+import com.services.AirportService;
 
 import java.util.Optional;
 

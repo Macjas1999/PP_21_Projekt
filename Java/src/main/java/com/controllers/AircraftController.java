@@ -1,6 +1,6 @@
 package com.controllers;
 
-import entities.Aircraft;
+import com.entities.Aircraft;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -8,7 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import services.AircraftService;
+import com.services.AircraftService;
 import springfox.documentation.annotations.ApiIgnore;
 
 @RestController

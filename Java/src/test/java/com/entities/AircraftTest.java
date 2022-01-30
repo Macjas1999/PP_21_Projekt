@@ -1,6 +1,5 @@
 package com.entities;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,6 +8,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class AircraftTest {
 
     private Aircraft testUnit;
+
+    AircraftTest(Aircraft testUnit) {
+        this.testUnit = testUnit;
+    }
 
     @BeforeEach
     void setUp() {
@@ -29,7 +32,7 @@ class AircraftTest {
     @Test
     void setType() {
         testUnit.setType("military");
-        String typeOfTU = testUnit.setType();
+        String typeOfTU = testUnit.getType();
         assertEquals("military", typeOfTU);
     }
 

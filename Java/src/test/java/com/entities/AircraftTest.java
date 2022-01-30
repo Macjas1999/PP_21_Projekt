@@ -1,6 +1,5 @@
 package com.entities;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,9 +9,12 @@ class AircraftTest {
 
     private Aircraft testUnit;
 
+    AircraftTest(Aircraft testUnit) {
+        this.testUnit = testUnit;
+    }
+
     @BeforeEach
-    void setUp() {
-        Aircraft testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
+    void setUp() {testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
     }
 
 //    @AfterEach
@@ -29,7 +31,7 @@ class AircraftTest {
     @Test
     void setType() {
         testUnit.setType("military");
-        String typeOfTU = testUnit.setType();
+        String typeOfTU = testUnit.getType();
         assertEquals("military", typeOfTU);
     }
 
@@ -48,7 +50,7 @@ class AircraftTest {
 
     @Test
     void getRegistration_number() {
-        String regNumOfTU = testUnit.getType();
+        String regNumOfTU = testUnit.getRegistration_number();
         assertEquals("TEST343", regNumOfTU);
     }
 

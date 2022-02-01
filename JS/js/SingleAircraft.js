@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const genericStyle = {
-  color: '',
+  color: '#009999',
 };
 
 const visitStyle = {

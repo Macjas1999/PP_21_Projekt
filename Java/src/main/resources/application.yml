@@ -10,7 +10,5 @@ spring:
     driverClassName: org.hsqldb.jdbcDriver
   datasource:
     url: jdbc:hsqldb:mem:spring
-    username: sa
+    username: admin
     password:
-
-  admin

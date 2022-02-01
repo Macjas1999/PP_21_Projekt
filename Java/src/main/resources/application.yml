@@ -9,7 +9,7 @@ spring:
   database:
     driverClassName: org.postgresql.Driver
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: sa
-    password:
+    url: jdbc:postgresql://psql.wmi.amu.edu.pl:5432/mw?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory
+    username: mj
+    password: postgres
 

@@ -15,7 +15,7 @@ class AircraftTest {
 
     @BeforeEach
     void setUp() {
-        Aircraft testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
+         testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
     }
 
 //    @AfterEach

@@ -16,7 +16,6 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -83,9 +82,46 @@ textarea {
   resize: vertical;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+body{
+
+  background-color: #00cccc;
+  width: 98%;
+  height: 300px;
+  margin-left: 1%;
+  font-family: inherit;
+  min-width: 98%;
+}
+.h_txt{
+  background-color: #009999;
+  color: #004a4a;
+  font-family: inherit;
+  text-align: center;
+  padding: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.menubar {
+  background-color: #009999;
+  color: #004a4a;
+  font-size: 1.15em;
+  text-decoration: none;
+  font-family: inherit;
+  text-align: center;;
+  border-style: none;
+}
+.box {
+  background-color: #009999;
+  padding-left: 5%;
+  border-style: none;
+}
+
+.main{
+  width: 98%;
+  margin-left: 1%;
+  margin-bottom: 0;
+  color: #004545;
+}
+
 
 /* ==========================================================================
    Helper classes

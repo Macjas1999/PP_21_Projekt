@@ -14,7 +14,7 @@ class AirportTest {
 
     @BeforeEach
     void setUp() {
-        Airport testUnit = new Airport("NOPE", 54);
+        testUnit = new Airport("NOPE", 54);
 
     }
 

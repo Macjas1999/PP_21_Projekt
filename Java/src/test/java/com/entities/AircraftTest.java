@@ -14,7 +14,8 @@ class AircraftTest {
     }
 
     @BeforeEach
-    void setUp() {testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
+    void setUp() {
+        testUnit = new Aircraft("civil", "TestMan", "TEST343","T1");
     }
 
 //    @AfterEach
@@ -50,7 +51,7 @@ class AircraftTest {
 
     @Test
     void getRegistration_number() {
-        String regNumOfTU = testUnit.getRegistration_number();
+        String regNumOfTU = testUnit.getType();
         assertEquals("TEST343", regNumOfTU);
     }
 

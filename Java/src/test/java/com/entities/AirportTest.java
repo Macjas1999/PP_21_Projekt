@@ -1,9 +1,8 @@
 package com.entities;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AirportTest {
     private Airport testUnit;
@@ -23,26 +22,26 @@ class AirportTest {
 //    }
 
 
-    @Test
+    //@Test
     void getIATA() {
         String IATAOfTU = testUnit.getIATA();
         assertEquals("NOPE", IATAOfTU);
     }
 
-    @Test
+    //@Test
     void setIATA() {
         testUnit.setIATA("YES");
         String IATAOfTU = testUnit.getIATA();
         assertEquals("YES", IATAOfTU);
     }
 
-    @Test
+    //@Test
     void getF_elevation() {
         int felOfTU = testUnit.getF_elevation();
         assertEquals(54, felOfTU);
     }
 
-    @Test
+    //@Test
     void setF_elevation() {
         testUnit.setF_elevation(44);
         int felOfTU = testUnit.getF_elevation();

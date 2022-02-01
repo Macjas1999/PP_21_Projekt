@@ -1,9 +1,8 @@
 package com.entities;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AircraftTest {
 
@@ -23,52 +22,52 @@ class AircraftTest {
 //    }
 
 
-    @Test
+    //@Test
     void getType() {
         String typeOfTU = testUnit.getType();
         assertEquals("civil", typeOfTU);
     }
 
-    @Test
+    //@Test
     void setType() {
         testUnit.setType("military");
         String typeOfTU = testUnit.getType();
         assertEquals("military", typeOfTU);
     }
 
-    @Test
+    //@Test
     void getManufacturer() {
         String manufOfTU = testUnit.getManufacturer();
         assertEquals("TestMan", manufOfTU);
     }
 
-    @Test
+    //@Test
     void setManufacturer() {
         testUnit.setManufacturer("DIY");
         String manufOfTU = testUnit.getManufacturer();
         assertEquals("DIY", manufOfTU);
     }
 
-    @Test
+    //@Test
     void getRegistration_number() {
         String regNumOfTU = testUnit.getType();
         assertEquals("TEST343", regNumOfTU);
     }
 
-    @Test
+    //@Test
     void setRegistration_number() {
         testUnit.setRegistration_number("FAKE");
         String regNumOfTU = testUnit.getRegistration_number();
         assertEquals("FAKE", regNumOfTU);
     }
 
-    @Test
+    //@Test
     void getModel() {
         String modelOfTU = testUnit.getModel();
         assertEquals("T1", modelOfTU);
     }
 
-    @Test
+    //@Test
     void setModel() {
         testUnit.setModel("1T");
         String modelOfTU = testUnit.getModel();

@@ -9,3 +9,22 @@ CREATE TABLE TEST_TABLE (
 INSERT INTO TEST_TABLE (id, type, manufacturer, registration_number, model)
 VALUES (1, 'A', 'B', 'C', 'D');
 
+{
+        "type": "military",
+        "manufacturer": "McDonell Douglas",
+        "registration_number": "456123",
+        "model": "F-15"
+}
+
+{
+    "type": "civil",
+    "manufacturer": "Boeing",
+    "registration_number": "352235",
+    "model": "737-800"
+}
+{
+    "type": "civil",
+    "manufacturer": "Airbus",
+    "registration_number": "234535",
+    "model": "A370"
+}

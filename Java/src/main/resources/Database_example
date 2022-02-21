@@ -1,0 +1,11 @@
+CREATE TABLE TEST_TABLE (
+                            id int,
+                            type varchar(60),
+                            manufacturer varchar(60),
+                            registration_number varchar(60),
+                            model varchar(60)
+);
+
+INSERT INTO TEST_TABLE (id, type, manufacturer, registration_number, model)
+VALUES (1, 'A', 'B', 'C', 'D');
+

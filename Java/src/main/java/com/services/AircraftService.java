@@ -10,9 +10,9 @@ import java.util.Optional;
 public interface AircraftService {
     Aircraft saveAircraft(Aircraft aircraft);
 
-    Optional<Aircraft> getAircraftById(Integer id);
-
     void deleteAircraft(Integer id);
+
+    Optional<Aircraft> getAircraftById(Integer id);
 
     Iterable<Aircraft> listAllAircrafts();
 

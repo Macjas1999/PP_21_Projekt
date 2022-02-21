@@ -8,12 +8,12 @@ import javax.persistence.*;
 
 @Entity
 @JsonIdentityInfo(generator= ObjectIdGenerators.IntSequenceGenerator.class,
-        property="", scope= com.entities.Aircraft.class)
+        property="refId", scope= com.entities.Aircraft.class)
 
 
 public class Aircraft {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue//(strategy = GenerationType.AUTO)
     @CollectionTable
     @Column
     private  int id;

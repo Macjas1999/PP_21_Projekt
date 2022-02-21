@@ -58,7 +58,7 @@ public class AircraftController {
         }
     }
     //Delete
-    @DeleteMapping(value = "/product/{id}")
+    @DeleteMapping(value = "/aircraft/{id}")
     public  ResponseEntity delete(@PathVariable Integer id) {
         aircraftService.deleteAircraft(id);
         return new ResponseEntity(HttpStatus.OK);

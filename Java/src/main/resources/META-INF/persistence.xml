@@ -6,9 +6,9 @@
     <persistence-unit name="hibernate-dynamic" transaction-type="RESOURCE_LOCAL">
         <properties>
             <!-- Configuring JDBC properties -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:/home/maciej/Database"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:mem:Database"/>
             <property name="javax.persistence.jdbc.user" value="admin"/>
-            <property name="javax.persistence.jdbc.password" value=""/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
             <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbc.JDBCDriver" />
 
             <!-- Hibernate properties -->

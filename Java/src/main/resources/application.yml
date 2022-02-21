@@ -9,6 +9,6 @@ spring:
   database:
     driverClassName: org.hsqldb.jdbcDriver
   datasource:
-    url: jdbc:hsqldb:file:/home/maciej/Database
+    url: jdbc:hsqldb:mem:Database
     username: admin
-    password:
+    password: admin
